@@ -1,0 +1,5 @@
+        // Illustrate polymorphism by displaying info using the base class reference
+        System.out.println("\nVehicle Information (Polymorphism):");
+        for (Vehicle v : vehicles) {
+            System.out.println(v.getVehicleInfo());
+        }

@@ -1,0 +1,115 @@
+The `Vehicle.java` and `Automobile.java` classes
+
+				First, the `Vehicle.java` class:
+
+```java
+public class Vehicle {
+    private String make;
+    private String model;
+    private int year;
+    private String VIN;
+    public static final byte VALID_VIN_LENGTH = 17;
+
+    // Constructor with 4 arguments
+    public Vehicle(String make, String model, int year, String VIN) {
+        setMake(make);
+        setModel(model);
+        setYear(year);
+        setVIN(VIN);
+    }
+
+    // Accessor methods for make
+    public String getMake() {
+        return make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    // Accessor methods for model
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    // Accessor methods for year
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    // Accessor methods for VIN
+    public String getVIN() {
+        return VIN;
+    }
+
+    public void setVIN(String VIN) {
+        this.VIN = VIN;
+    }
+
+    // Method to get formatted vehicle information
+    public String getVehicleInfo() {
+        return "Make: " + getMake() + "\n" +
+               "Model: " + getModel() + "\n" +
+               "Year: " + getYear() + "\n" +
+               "VIN: " + getVIN();
+    }
+}
+```
+
+				Next, the `Automobile.java` class that inherits from `Vehicle`:
+
+```java
+public class Automobile extends Vehicle {
+    private int horsepower;
+    private String fuelType;
+
+    // Constructor with 6 arguments
+    public Automobile(String make, String model, int year, String VIN, int horsepower, String fuelType) {
+        super(make, model, year, VIN); // Call parent constructor
+        setHorsepower(horsepower);
+        setFuelType(fuelType);
+    }
+
+    // Accessor methods for horsepower
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    public void setHorsepower(int horsepower) {
+        this.horsepower = horsepower;
+    }
+
+    // Accessor methods for fuelType
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+    }
+
+    // Override getVehicleInfo() to display Automobile info
+    @Override
+    public String getVehicleInfo() {
+        return super.getVehicleInfo() + "\n" +
+               "Horsepower: " + getHorsepower() + "\n" +
+               "Fuel Type: " + getFuelType();
+    }
+}
+```
+
+Feel free to use these classes as a starting point for your project! 😊
+
+Source: Conversation with Bing, 2024-03-26
+(1) Java Rental Car Project. Summary: | by Egemen Efe Şahin - Medium. https://medium.com/@egemenefesahin99/java-rental-car-project-801bb291502d.
+(2) Java Inheritance - Vehicle class hierarchy - w3resource. https://www.w3resource.com/java-exercises/java-inheritance-exercise-9.php.
+(3) inheritance - Creating a Java Car class - Stack Overflow. https://stackoverflow.com/questions/10225224/creating-a-java-car-class.
+(4) Creating a car class in java - Stack Overflow. https://stackoverflow.com/questions/26092179/creating-a-car-class-in-java.
